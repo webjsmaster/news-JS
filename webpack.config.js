@@ -12,10 +12,14 @@ const baseConfig = {
                 test: /\.css$/i,
                 use: ['style-loader', 'css-loader'],
             },
+            {
+                test: /\.ts/,
+                use: 'ts-loader',
+            }
         ],
     },
     resolve: {
-        extensions: ['.js'],
+        extensions: ['.js', '.ts', 'json'],
     },
     output: {
         filename: 'index.js',
